@@ -1,0 +1,304 @@
+:root {
+    --primary-color: #d8b4ff;
+    --secondary-color: #c084fc;
+    --accent-color: #a855f7;
+    --text-color: #4c1d95;
+    --light-color: #f3e8ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Estilos del carrusel */
+header {
+    height: 60vh;
+    position: relative;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slide-content {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos del poema */
+main {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.poema-section {
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.typing-text {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    text-align: center;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--accent-color) }
+}
+
+.poema {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.poema p {
+    margin-bottom: 10px;
+}
+
+/* Estilos de la sección de Spotify */
+.spotify-section {
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.spotify-section h2 {
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.spotify-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.spotify-section input {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.spotify-section button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.spotify-section button:hover {
+    background-color: var(--secondary-color);
+}
+
+#spotify-embed {
+    margin-top: 20px;
+    min-height: 80px;
+}
+
+/* Animación del corazón */
+.heart-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.heart {
+    font-size: 4rem;
+    color: #e11d48;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+/* Estilos del pie de página */
+footer {
+    padding: 40px 20px;
+    background-color: var(--secondary-color);
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+}
+
+.declaration h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#yes-btn {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#yes-btn:hover {
+    background-color: #059669;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#response-image {
+    margin-top: 30px;
+    min-height: 200px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path fill="%23e11d48" d="M100,184 C140,164 172,132 184,100 C196,68 188,44 172,28 C156,12 132,4 100,4 C68,4 44,12 28,28 C12,44 4,68 16,100 C28,132 60,164 100,184 Z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    header {
+        height: 40vh;
+    }
+    
+    .slide-content {
+        font-size: 1.5rem;
+    }
+    
+    .typing-text {
+        font-size: 1.5rem;
+    }
+    
+    .poema {
+        font-size: 1rem;
+    }
+    
+    .declaration h2 {
+        font-size: 2rem;
+    }
+    
+    #yes-btn {
+        padding: 12px 30px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 20px 10px;
+    }
+    
+    .poema-section, .spotify-section {
+        padding: 20px;
+    }
+    
+    .declaration h2 {
+        font-size: 1.8rem;
+    }
+    
+    .heart {
+        font-size: 3rem;
+    }
+    
+    .name {
+        font-size: 1.5rem;
+    }
+}
